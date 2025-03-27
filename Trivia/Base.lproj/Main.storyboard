@@ -17,13 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question 1/3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI6-ne-nSl">
-                                <rect key="frame" x="33" y="71" width="326" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eAH-bZ-28h">
                                 <rect key="frame" x="71.666666666666686" y="461" width="250" height="253"/>
                                 <subviews>
@@ -147,8 +140,31 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Category" translatesAutoresizingMaskIntoConstraints="NO" id="GkG-Bs-bYL">
+                                <rect key="frame" x="-19" y="45" width="225" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Difficulty" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DCZ-La-47g">
+                                <rect key="frame" x="16" y="85" width="131" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Easy"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Hard"/>
+                                </segments>
+                                <connections>
+                                    <action selector="difficultyChanged:" destination="94n-Fr-8Tz" eventType="valueChanged" id="pga-3Z-Xi3"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question 1/3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI6-ne-nSl">
+                                <rect key="frame" x="125" y="102" width="326" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="categoryLabel" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncd-hv-gdZ">
-                                <rect key="frame" x="33" y="116" width="326" height="26"/>
+                                <rect key="frame" x="125" y="126" width="326" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
@@ -168,6 +184,8 @@
                         <outlet property="answerButton3" destination="X4X-0T-dPO" id="Pdr-lH-sWM"/>
                         <outlet property="answerButton4" destination="41P-Mv-68m" id="lJC-cx-1ov"/>
                         <outlet property="categoryLabel" destination="Ncd-hv-gdZ" id="XzU-bu-P2i"/>
+                        <outlet property="categoryPicker" destination="GkG-Bs-bYL" id="CWV-3F-Ro0"/>
+                        <outlet property="difficultySegmentedControl" destination="DCZ-La-47g" id="NRZ-8q-U3R"/>
                         <outlet property="questionCounterLabel" destination="UI6-ne-nSl" id="dFw-fT-Aw6"/>
                         <outlet property="questionLabel" destination="XNk-a9-n8S" id="yoe-KD-8F4"/>
                     </connections>
@@ -179,10 +197,10 @@
     </scenes>
     <resources>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
